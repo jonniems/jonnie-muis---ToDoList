@@ -1,0 +1,172 @@
+/* Remove all margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    height: 75px;
+    background-color: #044fa9;
+}
+
+
+h1 {
+    margin: auto;
+    color: #ffffff;
+}
+
+.container {
+    display: grid;
+    margin: auto;
+    width: 100%;
+    grid-template: 100px 1fr / 1fr;
+    grid-template-areas:
+        "a"
+        "t"
+    ;
+}
+
+.add-container {
+    grid-area: a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fbd767;
+}
+
+#task-input {
+    width: 600px;
+    font-size: 18px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+}
+
+.add-btn {
+    background-color: #044fa9;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.add-btn:hover {
+    background-color: #06428a;
+}
+
+.task-container {
+    grid-area: t;
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    width: 100%;
+}
+
+li {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    padding: 0 10px;
+}
+
+li:nth-child(odd) {
+    background-color: #d7e2e9;
+}
+
+.input-text {
+    width: 900px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+}
+
+.save-btn {
+    background: url(img/save.png) no-repeat scroll 7px 7px transparent;
+    background-color: #044fa9;
+    border: none;
+    border-radius: 5px;
+    height: 46px;
+    width: 46px;
+    cursor: pointer;
+    margin: 0 5px 0 10px;
+}
+
+.save-btn:hover {
+    background-color: #06428a;
+}
+
+.delete-btn {
+    background: url(img/delete.png) no-repeat scroll 7px 7px transparent;
+    background-color: #e95c40;
+    border: none;
+    border-radius: 5px;
+    height: 46px;
+    width: 46px;
+    cursor: pointer;
+    margin: 0 5px 0 0;
+}
+
+.delete-btn:hover {
+    background-color: #ce5138;
+}
+
+.strike-through {
+    color: #0575fb;
+    text-decoration: line-through;
+}
+
+footer {
+    display: flex;
+    height: 75px;
+    background-color: #044fa9;
+}
+
+.footer-text {
+    margin: auto;
+    color: #ffffff;
+}
+
+@media screen and (max-width: 1024px) {
+    .input-text {
+        width: 800px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #task-input {
+        width: 400px;
+    }
+
+    .input-text {
+        width: 560px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    #task-input {
+        width: 160px;
+        font-size: 14px;
+    }
+
+    .add-btn {
+        font-size: 14px;
+    }
+
+    .input-text {
+        width: 200px;
+        font-size: 14px;
+    }
+}
